@@ -10,9 +10,24 @@ namespace CLR_Confidential
     {
         static void Main(string[] args)
         {
-            PrintInterfaceMap();
+            //PrintNonObjectTypes();
+            //Point.TestMemory();
+            //PrintInterfaceMap();
             Console.ReadKey();
         }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         private static void PrintInterfaceMap()
         {
