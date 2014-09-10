@@ -15,7 +15,8 @@ namespace CLR_Confidential
             //EvilPoint.DoAwfulThings();
             //Boxing.SeriouslyIToldYouNeverEverToDoThis();
             //PrintInterfaceMap();
-            EvilPerson.HuntTheEvilPerson();
+            //EvilPerson.HuntTheEvilPerson();
+            ApproximateValue.Reprehensible();
             Console.ReadKey();
         }
 
