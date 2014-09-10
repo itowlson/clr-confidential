@@ -49,7 +49,7 @@ namespace CLR_Confidential
 
             Console.WriteLine(point.X + " / " + point_.X);
 
-            EvilPoint thatPointAgain = point_;
+            EvilPoint thatPointAgain = (EvilPoint)o;
             thatPointAgain.X = 4;
 
             Console.WriteLine(point.X + " / " + point_.X);
