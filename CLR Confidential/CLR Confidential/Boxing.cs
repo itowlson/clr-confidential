@@ -73,4 +73,9 @@ namespace CLR_Confidential
             Console.WriteLine(point.X + " / " + point_.X);
         }
     }
+
+    public interface IX
+    {
+        int X { get; set; }
+    }
 }
