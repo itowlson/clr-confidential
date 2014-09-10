@@ -73,5 +73,39 @@ namespace CLR_Confidential
     {
         public int X { get; set; }  // Never do this
         public int Y { get; set; }  // Dammit, I just told you never to do this
+
+        public static void DoAwfulThings()
+        {
+            var point = new EvilPoint { X = 1, Y = 2 };
+            var points = new EvilPoint[] { point };
+
+            Console.WriteLine(point.X + " / " + points[0].X);
+
+            point.X = 2;
+            Console.WriteLine(point.X + " / " + points[0].X);
+
+            points[0].X = 3;
+            Console.WriteLine(point.X + " / " + points[0].X);
+
+            var pt = points[0];
+            pt.X = 4;
+            Console.WriteLine(point.X + " / " + points[0].X);
+
+            //Diagram d = new Diagram { Origin = point };
+            //d.Origin.X = 5;
+        }
+    }
+
+    public class Diagram
+    {
+        public EvilPoint Origin { get; set; }
+
+        public DiagramSettings Settings { get; set; }
+    }
+
+    public class DiagramSettings
+    {
+        public int Width { get; set; }
+        public int Height { get; set; }
     }
 }

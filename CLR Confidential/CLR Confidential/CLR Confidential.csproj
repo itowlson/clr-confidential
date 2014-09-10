@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Boxing.cs" />
     <Compile Include="Interfaces.cs" />
     <Compile Include="NonObjectTypes.cs" />
     <Compile Include="Program.cs" />

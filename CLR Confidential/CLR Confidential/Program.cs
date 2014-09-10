@@ -12,6 +12,8 @@ namespace CLR_Confidential
         {
             //PrintNonObjectTypes();
             //Point.TestMemory();
+            //EvilPoint.DoAwfulThings();
+            Boxing.SeriouslyIToldYouNeverEverToDoThis();
             //PrintInterfaceMap();
             Console.ReadKey();
         }
