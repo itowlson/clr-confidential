@@ -16,7 +16,8 @@ namespace CLR_Confidential
             //Boxing.SeriouslyIToldYouNeverEverToDoThis();
             //PrintInterfaceMap();
             //EvilPerson.HuntTheEvilPerson();
-            ApproximateValue.Reprehensible();
+            //ApproximateValue.Reprehensible();
+            EqualityTests.Name();
             Console.ReadKey();
         }
 

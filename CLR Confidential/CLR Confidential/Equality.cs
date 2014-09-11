@@ -96,4 +96,81 @@ namespace CLR_Confidential
             Console.WriteLine(approx2.Equals(approx1));
         }
     }
+
+    public class Name
+    {
+        private readonly string _text;
+
+        public Name(string text)
+        {
+            _text = text;
+        }
+
+        public string Text
+        {
+            get { return _text; }
+        }
+
+        public override bool Equals(object obj)
+        {
+            var other = obj as Name;
+
+            if (other == null)
+            {
+                return false;
+            }
+
+            return StringComparer.OrdinalIgnoreCase.Equals(other._text, this._text);
+        }
+
+        public override int GetHashCode()
+        {
+            return StringComparer.OrdinalIgnoreCase.GetHashCode(_text);
+        }
+    }
+
+    public class ScopedName : Name
+    {
+        private readonly string _namespace;
+
+        public ScopedName(string @namespace, string name)
+            : base(name)
+        {
+            _namespace = @namespace;
+        }
+
+        public override bool Equals(object obj)
+        {
+            var other = obj as ScopedName;
+
+            if (other == null)
+            {
+                return false;
+            }
+
+            return StringComparer.OrdinalIgnoreCase.Equals(other.Text, this.Text)
+                && StringComparer.OrdinalIgnoreCase.Equals(other._namespace, this._namespace);
+        }
+
+        public override int GetHashCode()
+        {
+            return StringComparer.OrdinalIgnoreCase.GetHashCode(Text)
+                ^ StringComparer.OrdinalIgnoreCase.GetHashCode(_namespace);
+        }
+    }
+
+    public static class EqualityTests
+    {
+        public static void Name()
+        {
+            ScopedName microsoftServer = new ScopedName("ms", "server1");
+            ScopedName myServer = new ScopedName("ivan", "server1");
+
+            Console.WriteLine(microsoftServer.Equals(myServer));
+
+            Name skynetServer = new Name("server1");
+
+            Console.WriteLine(skynetServer.Equals(microsoftServer));
+        }
+    }
 }
