@@ -22,8 +22,9 @@ namespace CLR_Confidential
             //DelegateTests.Compare();
             //StackTraceTests.A();
             //Console.WriteLine(StackTraceTests.Factorial_(20000, 1));
+            //Console.WriteLine(StackTraceTests.IsOdd(1000000));
             //ExceptionTests.LoggedReticulate(null);
-            ExceptionTests.MeasureExceptionPerformance();
+            //ExceptionTests.MeasureExceptionPerformance();
             Console.ReadKey();
         }
 

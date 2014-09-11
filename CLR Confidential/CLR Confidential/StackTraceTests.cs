@@ -57,5 +57,23 @@ namespace CLR_Confidential
             //}
             return Factorial_(i - 1, accumulator * i);
         }
+
+        public static bool IsOdd(int i)
+        {
+            if (i == 0)
+            {
+                return false;
+            }
+            return IsEven(i - 1);
+        }
+
+        public static bool IsEven(int i)
+        {
+            if (i == 0)
+            {
+                return true;
+            }
+            return IsOdd(i - 1);
+        }
     }
 }
