@@ -11,14 +11,16 @@ namespace CLR_Confidential
         static void Main(string[] args)
         {
             //PrintNonObjectTypes();
-            //Point.TestMemory();
+            Point.TestMemory();
             //EvilPoint.DoAwfulThings();
             //Boxing.SeriouslyIToldYouNeverEverToDoThis();
             //PrintInterfaceMap();
             //EvilPerson.HuntTheEvilPerson();
             //ApproximateValue.Reprehensible();
             //EqualityTests.Name();
-            ObjectLayoutTests.StructInteropLayout();
+            //ObjectLayoutTests.StructInteropLayout();
+            //StackTraceTests.A();
+            //Console.WriteLine(StackTraceTests.Factorial_(20000, 1));
             Console.ReadKey();
         }
 

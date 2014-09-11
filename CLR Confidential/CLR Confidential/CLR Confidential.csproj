@@ -34,10 +34,12 @@
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <Prefer32Bit>true</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,12 +54,17 @@
     <Compile Include="ObjectLayout.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StackTraceTests.cs" />
     <Compile Include="ValueTypes.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CLR via FSharp\CLR via FSharp.fsproj">
+      <Project>{67087de6-37d2-4558-aaa5-b95acb3e5dd1}</Project>
+      <Name>CLR via FSharp</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CLR Via VB\CLR Via VB.vbproj">
       <Project>{bcc50c66-907f-41c1-b0ec-d6507b12f059}</Project>
       <Name>CLR Via VB</Name>
