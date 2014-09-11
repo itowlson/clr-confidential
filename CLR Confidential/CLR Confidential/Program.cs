@@ -11,7 +11,7 @@ namespace CLR_Confidential
         static void Main(string[] args)
         {
             //PrintNonObjectTypes();
-            Point.TestMemory();
+            //Point.TestMemory();
             //EvilPoint.DoAwfulThings();
             //Boxing.SeriouslyIToldYouNeverEverToDoThis();
             //PrintInterfaceMap();
@@ -19,6 +19,7 @@ namespace CLR_Confidential
             //ApproximateValue.Reprehensible();
             //EqualityTests.Name();
             //ObjectLayoutTests.StructInteropLayout();
+            DelegateTests.Compare();
             //StackTraceTests.A();
             //Console.WriteLine(StackTraceTests.Factorial_(20000, 1));
             Console.ReadKey();

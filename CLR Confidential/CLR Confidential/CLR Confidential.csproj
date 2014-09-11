@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Boxing.cs" />
+    <Compile Include="DelegateTests.cs" />
     <Compile Include="Equality.cs" />
     <Compile Include="Interfaces.cs" />
     <Compile Include="NonObjectTypes.cs" />
