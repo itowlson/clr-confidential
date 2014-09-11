@@ -25,6 +25,7 @@ namespace CLR_Confidential
             //Console.WriteLine(StackTraceTests.IsOdd(1000000));
             //ExceptionTests.LoggedReticulate(null);
             //ExceptionTests.MeasureExceptionPerformance();
+            //SelfTrackOMatic.TestResurrection();
             Console.ReadKey();
         }
 
