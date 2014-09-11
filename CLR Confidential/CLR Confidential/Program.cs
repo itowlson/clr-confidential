@@ -19,9 +19,11 @@ namespace CLR_Confidential
             //ApproximateValue.Reprehensible();
             //EqualityTests.Name();
             //ObjectLayoutTests.StructInteropLayout();
-            DelegateTests.Compare();
+            //DelegateTests.Compare();
             //StackTraceTests.A();
             //Console.WriteLine(StackTraceTests.Factorial_(20000, 1));
+            //ExceptionTests.LoggedReticulate(null);
+            ExceptionTests.MeasureExceptionPerformance();
             Console.ReadKey();
         }
 
