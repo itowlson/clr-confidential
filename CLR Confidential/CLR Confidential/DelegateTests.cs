@@ -23,15 +23,21 @@ namespace CLR_Confidential
             MapC<int, int> mapc = new Squarer();
             mapc.Invoke(7);  // JIT
 
-            Stopwatch sw = Stopwatch.StartNew();
+            int runCount = 5;
+            int testCount = 50000000;
 
-            for (int i = 0; i < 50000000; ++i)
+            for (int run = 0; run < runCount; ++run)
             {
-                mapc.Invoke(i % 1000);
-            }
+                Stopwatch sw = Stopwatch.StartNew();
 
-            sw.Stop();
-            Console.WriteLine(sw.ElapsedMilliseconds);
+                for (int i = 0; i < testCount; ++i)
+                {
+                    mapd.Invoke(i % 1000);
+                }
+
+                sw.Stop();
+                Console.WriteLine(sw.ElapsedMilliseconds);
+            }
         }
 
         private static int Square(int i) { return i * i; }
