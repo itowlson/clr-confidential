@@ -49,6 +49,7 @@
     <Compile Include="Equality.cs" />
     <Compile Include="Interfaces.cs" />
     <Compile Include="NonObjectTypes.cs" />
+    <Compile Include="ObjectLayout.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValueTypes.cs" />

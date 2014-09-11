@@ -17,7 +17,8 @@ namespace CLR_Confidential
             //PrintInterfaceMap();
             //EvilPerson.HuntTheEvilPerson();
             //ApproximateValue.Reprehensible();
-            EqualityTests.Name();
+            //EqualityTests.Name();
+            ObjectLayoutTests.StructInteropLayout();
             Console.ReadKey();
         }
 
